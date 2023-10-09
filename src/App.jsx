@@ -5,6 +5,18 @@ import { nanoid } from "nanoid";
 export default function App() {
   const [dice, setDice] = React.useState(allNewDices());
 
+  const [tenzies, setTenzies] = React.useState(false);
+
+  React.useEffect(() => {
+    const val = dice[0].value;
+    for (let obj of dice){
+      if (!obj.isHeld || obj.value !== val) return;
+    }
+    setTenzies(true);
+
+    console.log('You won!');
+  }, [dice])
+
   function allNewDices() {
     return Array(10).fill(null).map(() => ({
                 value: Math.ceil(Math.random() * 6),
@@ -14,7 +26,6 @@ export default function App() {
   }
 
   function toggleHeld(id){
-    console.log(id);
     setDice(prev => prev.map(obj => obj.id === id ? {...obj, isHeld: !obj.isHeld} : obj));
   }
 
