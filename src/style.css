@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: #0B2434;
+  padding-block: 15vh;
+}
+
+main{
+  background: #F5F5F5;
+  align-self: center;
+  max-width: 80%;
+  margin-inline: 10%;
+  height: 70vh;
+  border-radius: 15px;
+}
+
+
