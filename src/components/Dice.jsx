@@ -1,7 +1,7 @@
 
 export default function Dice(prop){
     return (
-        <div className="dice">
+        <div onClick={prop.toggleHeld} className={prop.isHeld ? 'held' : 'dice'}>
             {prop.value}
         </div>
     )
