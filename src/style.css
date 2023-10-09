@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Karla', sans-serif;
 }
 
 body {
@@ -17,6 +18,8 @@ main{
   height: 650px;
   border-radius: 15px;
   display: flex;
+  flex-direction: column;
+  gap: 40px;
   justify-content: center;
   align-items: center;
 }
@@ -31,12 +34,24 @@ main{
   border-radius: 10px;
   height: 60px;
   font-size: 30px;
-  font-family: 'Karla', sans-serif;
   font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #FFF;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+button{
+  font-size: 30px;
+  background: #5035FF;
+  border: 0;
+  border-radius: 6px;
+  color: #FFF;
+  width: 130px;
+  height: 50px;
+  font-weight: 600;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
